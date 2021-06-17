@@ -5,7 +5,7 @@ class Entrada():
         Matriz = []
         Termos = []
         dados = []
-        n = 2#int(input("Número de variáveis do Sistema: "))
+        n = int(input("Número de variáveis do Sistema: "))
         
         for i in range(n):
             print("Entre com todos os índeces de X",i+1,":")
