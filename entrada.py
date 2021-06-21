@@ -5,6 +5,7 @@ class Entrada():
         Matriz = []
         Termos = []
         dados = []
+        M = []
         n = int(input("Número de variáveis do Sistema: "))
         
         for i in range(n):
@@ -21,7 +22,17 @@ class Entrada():
             print(i+1,"º Termo:",end=" ")
             t = float(input())
             Termos.append(t)
+        m = input("\nMaximização? [S/N]: ")
+        if m == 's' or m == 'S':
+            o = "Max"
+        else:
+            o = 'Min'
+        print("Entre com os índices da Função de",o,":")
+        for i in range(n):
+            print("X",i+1,"= ",end="")
+            t = float(input())
+            M.append(t)
 
         for i in dados:
             Matriz.append(i)
-        Calculo.funcao(Matriz,Termos)
+        Calculo.funcao(Matriz,Termos,M,o)

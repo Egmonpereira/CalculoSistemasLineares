@@ -2,11 +2,14 @@ import numpy
 import pandas as pd
 
 class Calculo():
-    def funcao(Matriz,Termos):
+    def funcao(Matriz,Termos,M,o):
         Deter = []
+        L = []
         aux = []
         temp = []
         temp1 = []
+        soma = 0
+        
         for i in range(len(Matriz)):
             s = str(i+1)
             temp.append("X"+s+" =")
@@ -45,5 +48,12 @@ class Calculo():
             print("\nValores Reais:")
             for i in range(len(Matriz)):
                 print("X",i+1,"=", round(Deter[i+1]/Deter[0],2))
+                L.append(Deter[i+1]/Deter[0])
         else:
             print('Sistema Indeterminado ou Impossível')
+        
+
+        for i in range(len(L)):
+            soma = soma + L[i] * M[i]
+
+        print('\n',o,'=',round(soma,2))
