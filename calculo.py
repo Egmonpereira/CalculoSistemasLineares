@@ -2,7 +2,7 @@ import numpy
 import pandas as pd
 
 class Calculo():
-    def funcao(Matriz,Termos,M,o):
+    def funcao(Matriz,Termos,M):
         Deter = []
         L = []
         aux = []
@@ -56,4 +56,4 @@ class Calculo():
         for i in range(len(L)):
             soma = soma + L[i] * M[i]
 
-        print('\n',o,'=',round(soma,2))
+        print('\nZ na Intersecção das retas =',round(soma,2))

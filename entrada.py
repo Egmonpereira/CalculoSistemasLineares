@@ -22,12 +22,8 @@ class Entrada():
             print(i+1,"º Termo:",end=" ")
             t = float(input())
             Termos.append(t)
-        m = input("\nMaximização? [S/N]: ")
-        if m == 's' or m == 'S':
-            o = "Max"
-        else:
-            o = 'Min'
-        print("Entre com os índices da Função de",o,":")
+
+        print("\nEntre com os índices do Modelo Matemático:")
         for i in range(n):
             print("X",i+1,"= ",end="")
             t = float(input())
@@ -35,4 +31,4 @@ class Entrada():
 
         for i in dados:
             Matriz.append(i)
-        Calculo.funcao(Matriz,Termos,M,o)
+        Calculo.funcao(Matriz,Termos,M)
